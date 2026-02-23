@@ -173,7 +173,7 @@ I have provided two .sql files that allow you to reset the ID sequence.
 Please test these scripts carefully to ensure they meet your specific
 requirements before using them in your production database.
 
-## Enhacement
+## Enhancement
 
 The provided version of the frontend is basic and not very visually
 appealing at first. You can use ThemedTk and custom fonts to enhance the

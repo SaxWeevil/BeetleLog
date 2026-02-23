@@ -11,7 +11,6 @@ from database import (
     last_nadel,
     last_nadel_with_p
 )
-from ttkthemes import ThemedTk
 
 # ------------------------------------------------------------------------------------------------------------
 # 0. Introduction
@@ -26,7 +25,7 @@ from ttkthemes import ThemedTk
 # 1. Main window
 # ------------------------------------------------------------------------------------------------------------
 
-root = ThemedTk(theme="plastik")  # selecting the theme
+root = tk.Tk()
 root.title("Arten & Beobachtungen") # add a title
 
 # start the frontend in fullscreen:
@@ -34,10 +33,6 @@ root.update_idletasks()
 root.geometry(
     f"{root.winfo_screenwidth()}x{root.winfo_screenheight()}+0+0"
 )
-
-# Use a global font    
-default_font = tkFont.Font(family="Ubuntu", size=10)
-root.option_add("*Font", default_font)
 
 # ------------------------------------------------------------------------------------------------------------
 # 2. Functions
@@ -258,7 +253,7 @@ def fe(parent, label, row, col, width=18, bold=False, fontsize=None):
     if bold or fontsize:
         size = fontsize if fontsize else 10
         weight = "bold" if bold else "normal"
-        font = tkFont.Font(family="Ubuntu", size=size, weight=weight)
+        font = tkFont.Font(size=size, weight=weight)
 
     ttk.Label(parent, text=label, font=font).grid(
         row=row, column=col*2, sticky="e", padx=5, pady=3

@@ -1,7 +1,3 @@
----
-editor_options: 
----
-
 # BeetleLog
 
 This program creates a simple collection database using SQLite and a

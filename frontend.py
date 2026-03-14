@@ -454,7 +454,7 @@ BEOB_FIELDS = [comment, pcomment, date1, date2, method, count, leg, det, vid, co
 
 DEFAULT_PERSON = "Tristan Schirok"
 
-for field in (leg, det, vid, coll):
+for field in (leg, det, coll):
     field.insert(0, DEFAULT_PERSON)
     
 WATCH_FIELDS = [

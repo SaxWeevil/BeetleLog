@@ -648,7 +648,7 @@ def clear_fields():
             else:
                 f.delete(0, tk.END)
 
-        for field in (leg, det, vid, coll):
+        for field in (leg, det, coll):
             field.insert(0, DEFAULT_PERSON)
 
 def clear_combobox(cb):

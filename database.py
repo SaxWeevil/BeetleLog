@@ -284,12 +284,11 @@ if __name__ == "__main__":
             Art_ID,
             genus || ' ' || species ||
             CASE 
-                WHEN parenthesis = '' THEN ''  -- leer, wenn keine Angabe
+                WHEN parenthesis IS NULL OR parenthesis = 0 THEN ''
                 WHEN parenthesis <> 0 THEN ' (' || author || ', ' || year || ')'
-                ELSE ' ' || author || ', ' || year
+                ELSE ''
             END AS spname
         FROM Arten;
-        
     ''')
     
     c.execute('''

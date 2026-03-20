@@ -284,7 +284,7 @@ if __name__ == "__main__":
             Art_ID,
             genus || ' ' || species ||
             CASE 
-                WHEN parenthesis IS NULL OR parenthesis = 0 THEN ''
+                WHEN parenthesis IS NULL OR parenthesis = 0 THEN ' ' || author || ', ' || year
                 WHEN parenthesis <> 0 THEN ' (' || author || ', ' || year || ')'
                 ELSE ''
             END AS spname
